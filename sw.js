@@ -3,12 +3,13 @@
 
 // 1. Nombre del caché y archivos a cachear
 const CACHE_NAME = "mi-cache-v1";
+
 const urlsToCache = [
-    `${BASE_PATH}index.html`,
-    `${BASE_PATH}offline.html`,
-    `${BASE_PATH}manifest.json`,
-    `${BASE_PATH}./icons/192x192.png`,
-    `${BASE_PATH}./icons/512x512.png`,
+    "index.html",
+    "offline.html",
+    "manifest.json",
+    "./icons/192x192.png",
+    "./icons/512x512.png"
 ];
 
 // 2. INSTALLAR -> se ejecuta al instalar un Service Worker (SW)
