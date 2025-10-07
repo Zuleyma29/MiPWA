@@ -6,7 +6,7 @@
     <title>Mi primera PWA</title>
 
     <!-- Vincular el manisfest -->
-     <link rel="manisfest" href="ejemplo1/manifest.json">
+     <link rel="manisfest" href="MiPWA/manifest.json">
 
      <!--Definnir color de la barra de navegación en móviles-->
      <meta name="theme-color" content="#2196f3">
@@ -18,10 +18,10 @@
     <p>Se puede instalar como aplicación en tu celular </p>
     <button onclick="alert('Hola desde la PWA')">Click aquí</button>
 
-    <!-- Registrar el Service Worker -->
+    <!-- Registrar el Service Worker-->
     <script>
         if ("serviceWorker" in navigator){
-            navigator.serviceWorker.register("ejemplo1/sw.js")
+            navigator.serviceWorker.register("MiPWA/sw.js")
             .then(()=> console.log("Servide worker registrado"))
             .catch(err => console.log("Error al registrar al SW", err));
         }
