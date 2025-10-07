@@ -7,8 +7,8 @@ const urlsToCache = [
     `${BASE_PATH}index.html`,
     `${BASE_PATH}offline.html`,
     `${BASE_PATH}manifest.json`,
-    `${BASE_PATH}./icons/icon-192x192.png`,
-    `${BASE_PATH}./icons/icon-512x512.png`,
+    `${BASE_PATH}./icons/192x192.png`,
+    `${BASE_PATH}./icons/512x512.png`,
 ];
 
 // 2. INSTALLAR -> se ejecuta al instalar un Service Worker (SW)
