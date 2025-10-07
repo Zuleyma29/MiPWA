@@ -3,7 +3,6 @@
 
 // 1. Nombre del caché y archivos a cachear
 const CACHE_NAME = "mi-cache-v1";
-const BASE_PATH = "MiPWA/";
 const urlsToCache = [
     `${BASE_PATH}index.html`,
     `${BASE_PATH}offline.html`,
