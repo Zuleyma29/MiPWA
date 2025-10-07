@@ -1,12 +1,14 @@
 // Estructura básica  de un Service Worker
 
 
-
 // 1. Nombre del caché y archivos a cachear
 const CACHE_NAME = "mi-cache-v1";
 const urlsToCache = [
     "index.html",
-    "offline.html"
+    "offline.html",
+    "/icons/icon-192x192.png",
+    "/icons/icon-512x512.png",
+
 ];
 
 // 2. INSTALLAR -> se ejecuta al instalar un Service Worker (SW)
