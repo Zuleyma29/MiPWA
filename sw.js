@@ -32,26 +32,19 @@ self.addEventListener("activate", event => {
     );
 });
 
-// 4. FETCH -> aquí agregamos la excepción para login.html
+// 4. FETCH -> intercepta peticiones de la app
+// Intercepta cada petición de la PWA
+// Buscar primero en caché
+// Si no está, busca en Internet
+// En caso de falla, muestra la página offline.html
 self.addEventListener("fetch", event => {
-    const requestUrl = new URL(event.request.url);
-
-    // Si la URL termina con login.html
-    if (requestUrl.pathname.endsWith('/login.html')) {
-        event.respondWith(
-            // Intentar ir a la red siempre
-            fetch(event.request).catch(() => caches.match("offline.html"))
-        );
-        return; // Importante para que no pase a la siguiente parte
-    }
-
-    // Comportamiento normal para todo lo demás
-    event.respondWith(
-        caches.match(event.request).then(response => {
-            return response || fetch(event.request).catch(() => caches.match("offline.html"));
-        })
-    );
+  event.respondWith(
+    caches.match(event.request).then(response => {
+      return response || fetch(event.request).catch(() => caches.match("offline.html"));
+    })
+  );
 });
+
 
 // 5. PUSH -> notificaciones en segundo plano
 // Manejo de notificaciones push (opcional)
